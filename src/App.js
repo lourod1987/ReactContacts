@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ListContacts from './ListContacts';
 
 const contacts = [
     {
@@ -19,13 +20,13 @@ const contacts = [
       "email": "tyler@reacttraining.com",
       "avatarURL": "http://localhost:5001/tyler.jpg"
     }
-  ]
+  ];
 
 class App extends Component {
     render() {
       return (
         <div>
-          Hello World
+          <ListContacts contacts={contacts} />
         </div>
       )
     }
