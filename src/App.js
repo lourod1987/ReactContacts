@@ -24,11 +24,13 @@ class App extends Component {
             }
           ]
     };
+
     removeContact = contact => {
-        this.setState((state) => ({
+        this.setState(state => ({
             contacts: state.contacts.filter( c => c.id !== contact.id)
         }));
     }
+
     render() {
       return (
         <div>
