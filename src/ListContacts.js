@@ -16,7 +16,7 @@ class ListContacts extends Component {
     }
 
     updateQuery = query => {
-        this.setState({ query: query.trim() })
+        this.setState({ query: query.trim() });
     }
 
     render() {
@@ -29,6 +29,8 @@ class ListContacts extends Component {
         } else {
             showingContacts = this.props.contacts;
         }
+
+        showingContacts.sort(sortBy('name'));
 
         return (
             <div className='list-contacts'>
